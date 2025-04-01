@@ -97,6 +97,8 @@ void Update()
 
     mainDeviceContext->PSSetShader(g_pPixelShader, nullptr, 0);
 
+    UpdateMesh();
+
     UpdateVSConstantBuffer(mainDeviceContext);
 
     mainDeviceContext->VSSetConstantBuffers(0, 1, &vsConstantBuffer);

@@ -8,7 +8,7 @@ DirectX::XMMATRIX projMatrix;
 void SetupCamera()
 {
     viewMatrix = DirectX::XMMatrixLookAtLH(
-        DirectX::XMVectorSet(0.0f, 0.0f, -30.0f, 0.0f),
+        DirectX::XMVectorSet(0.0f, 0.0f, -10.0f, 0.0f),
         DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 0.0f),
         DirectX::XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f)
     );

@@ -20,5 +20,10 @@ extern DirectX::XMMATRIX worldMatrix;
 
 void CreateSphereGeometry(float radius, int slices, int stacks);
 
+void CreateBox(float width, float height, float depth);
+
+void CreateSphere(float radius, UINT levels, UINT slices);
+
 void SetupMesh(ID3D11Device* mainDevice);
 
+void UpdateMesh();

@@ -5,3 +5,6 @@
 #include <d3dcompiler.h>
 #include <DirectXMath.h>
 #include <vector>
+#include <string>
+#include <map>
+#include <functional>

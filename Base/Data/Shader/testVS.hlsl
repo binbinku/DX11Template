@@ -15,7 +15,7 @@ struct VS_INPUT
 struct VS_OUTPUT
 {
     float4 Pos : SV_POSITION;
-    float3 Normal : NORMAL;
+    float4 color : COLOR;
 };
 
 VS_OUTPUT main(VS_INPUT input)
@@ -28,7 +28,13 @@ VS_OUTPUT main(VS_INPUT input)
     
     output.Pos = worldViewProjPos;
     
-    output.Normal = input.Normal;
+    float4 worldNormal = mul(float4(input.Normal, 0), worldMatrix);
+    
+    float3 lightDir = float3(0.5,-0.5,-0.5);
+    
+    float diff = dot(worldNormal.xyz, -lightDir);
+    
+    output.color = float4(1, 1, 1, 1) * diff;
     
     return output;
 }
